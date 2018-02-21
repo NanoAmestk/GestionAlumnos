@@ -1,4 +1,4 @@
-delimiter $$
+﻿delimiter $$
 
 create procedure sp_Iniciar_Sesion(
 	in Rut varchar(15)
@@ -234,16 +234,6 @@ begin
 	end if;
 end$$
 
-delimiter ;
-
-
-
-drop procedure sp_Usuarios_Grabar;
-
-
-
-delimiter $$
-
 create procedure sp_Usuarios_Grabar(
 	in ID int,
 	in Rut varchar(15),
@@ -323,11 +313,3 @@ begin
 end$$
 
 delimiter ;
-
-select * from parametros;
-select * from Usuarios;
-select * from Usuarios_Fotos;
-
-
-
-call sp_Usuarios_Grabar('1','1','1','systemadminn','adminn','','2','19920331','','+56944041861','','','3','','7','','1')
