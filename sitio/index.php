@@ -9,7 +9,7 @@
 		session_start();
 		session_destroy();
 	?>
-	<form id="frmLogIn" name="frmLogIn" method="post" action="controladores/login.php">
+	<form id="frmLogIn" name="frmLogIn" method="post" action="util/login.php">
     	<input type="text" id="txtRut" name="txtRut" />
         <br />
         <input type="password" id="txtPas" name="txtPas" />

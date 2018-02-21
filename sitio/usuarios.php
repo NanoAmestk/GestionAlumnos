@@ -14,7 +14,7 @@
 			echo '<script>window.location.replace("index.php");</script>';
 		}
 	?>
-    Perfiles
+    Usuarios
     <br />
     <ul>
     	<li><a href="home.php">Home</a></li>
@@ -26,7 +26,15 @@
     </ul>
     <br />
 	<form id="frm" name="frm">
-        <input type="hidden" id="hidIDUsu" name="hidIDUsu" value="<?php echo $_SESSION['IDUsu']; ?>" />
+        <?php
+			$IDUsu='-1';
+			
+			if(isset($_GET['IDUsu'])){
+				$IDUsu=$_GET['IDUsu'];
+			}
+		?>
+        
+        <input type="hidden" id="hidIDUsu" name="hidIDUsu" value="<?php echo $IDUsu; ?>" />
         <input type="hidden" id="hidIDGen" name="hidIDGen" />
         <input type="hidden" id="hidIDTipUsu" name="hidIDTipUsu" />
         <input type="hidden" id="hidIDEst" name="hidIDEst" />
@@ -111,6 +119,7 @@
                 <td>Comentarios</td>
                 <td>:</td>
                 <td><textarea id="txtCom" name="txtCom" readonly="readonly"></textarea></td>
+
             </tr>
             <tr>
             	<td></td>
@@ -125,6 +134,21 @@
             </tr>
         </table>
         <input type="submit" id="busUsu" name="busUsu" value="Grabar" />
+        <input type="button" id="btnLim" name="btnLim" value="Limpiar" />
+        <input type="button" id="btnEli" name="btnEli" value="Eliminar" />
+        <br />
+        <table id="tabLisUsu">
+        	<thead>
+            	<tr>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Genero</th>
+                    <th>Fecha Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </form>
 </body>
 </html>

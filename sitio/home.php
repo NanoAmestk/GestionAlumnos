@@ -20,7 +20,7 @@
         <li><a href="usuarios.php">Usuarios</a></li>
         <li><a href="cursos.php">Cursos</a></li>
         <li><a href="noticias.php">Noticias</a></li>
-        <li><a href="controladores/logout.php">Cerrar Sesión</a></li>
+        <li><a href="util/logout.php">Cerrar Sesión</a></li>
     </ul>
 </body>
 </html>
